@@ -1,0 +1,12 @@
+
+
+.imgProduct{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.tarjetaProducto{
+    max-width: 600px;
+    max-height: 600px;
+    gap: 10px;
+}

@@ -1,0 +1,9 @@
+
+
+.listaProductos{
+    display: grid;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
