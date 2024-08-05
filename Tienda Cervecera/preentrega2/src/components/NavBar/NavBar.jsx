@@ -6,8 +6,10 @@ import CartWidget from "../CartWidget/CartWidget"
 
 
 
-
 const NavBar = () => {
+
+  
+
   return (
     <div className="container-fluid bg-dark p-3 ">
        <nav className="navbar navbar-expand-lg bg-dark gap-3" data-bs-theme="dark">
@@ -33,11 +35,14 @@ const NavBar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" to="/category/merchandising">Merchandising</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="ejemplo">Ejemplo</Link>
+              </li>
             </ul>
           </div>
           
-          <div className="" id="navbarNav">
-            <CartWidget />
+          <div className="align-middle" id="navbarNav">
+            <CartWidget  />
           </div>
         </div>
        </nav>

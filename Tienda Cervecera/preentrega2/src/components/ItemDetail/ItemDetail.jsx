@@ -1,7 +1,33 @@
+import { useState,useContext} from "react"
 import Counter from "../Counter/Counter"
+import { Link } from "react-router-dom"
+import { useCart } from "./CartContext"
+//import { CartContext } from "./CartContext"
 
 
-const ItemDetail = ({ img, name, category, subcategory, description, price, stock }) => {
+const ItemDetail = ({ id,img, name, category, subcategory, description, price, stock }) => {
+  
+  const [quantity, setQuantity] = useState(0)
+
+  //const {addItem,isInCart} = useContext(CartContext)
+  const {addItem, isInCart} = useCart()
+  
+  const handleAdd = (cantidad) => {
+
+    const productObject = {
+      id, name, price, quantity: cantidad 
+    }
+    addItem(productObject)
+
+   /* const objectoAgregado = {
+      id, name, price
+    }
+    console.log(objectoAgregado)
+    console.log("agregue al carrito", cantidad)
+    setQuantity(cantidad)*/
+  }
+  
+  
   return (
     <div className="card bg-dark text-white border border-white p-2 text-center">
       <div className="card bg-dark p-1" >
@@ -27,11 +53,16 @@ const ItemDetail = ({ img, name, category, subcategory, description, price, stoc
           <strong>Stock : {stock}</strong>
         </div>
         <div>
-          <Counter stock={stock}/>
+          {
+            isInCart(id) ?  (              
+              <Link to="/cart"><button className="rounded p-2" type="button">Finalizar Compra</button></Link>
+            ):  (<Counter stock={stock} onAdd={handleAdd} />)
+          }
+          
         </div>
-        <div className="p-3 ">
-          <button className="rounded" type="button">Agregar al Carrito</button>
-        </div>
+        {/*<div className="p-3 ">
+          <button className="rounded"  type="button">Agregar al Carrito</button>
+        </div>*/}
       </div>
     </div>
   )
