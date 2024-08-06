@@ -3,9 +3,6 @@ import { Link } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
 
 
-
-
-
 const NavBar = () => {
 
   
@@ -30,10 +27,10 @@ const NavBar = () => {
                 <Link className="nav-link active text-uppercase" aria-current="page" to="/">Inicio</Link>
               </li>
               <li className="nav-item ">
-                <Link className="nav-link active" to="/category/cervezas">Cervezas</Link>
+                <Link className="nav-link active" to="/category/Cervezas">Cervezas</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/category/merchandising">Merchandising</Link>
+                <Link className="nav-link active" to="/category/Merchandising">Merchandising</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" to="ejemplo">Ejemplo</Link>

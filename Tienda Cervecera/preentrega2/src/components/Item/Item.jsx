@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-import Counter from '../Counter/Counter'
+
 import './Item.css'
 
 
