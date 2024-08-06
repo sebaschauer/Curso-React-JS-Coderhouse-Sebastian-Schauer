@@ -1,9 +1,9 @@
-import { useState,useContext} from "react"
+import { useState} from "react"
 import Counter from "../Counter/Counter"
 import { Link } from "react-router-dom"
 import { useCart } from "./CartContext"
 //import { CartContext } from "./CartContext"
-
+//import { useContext } from "react"
 
 const ItemDetail = ({ id,img, name, category, subcategory, description, price, stock }) => {
   

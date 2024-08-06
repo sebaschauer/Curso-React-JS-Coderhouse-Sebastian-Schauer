@@ -9,7 +9,7 @@ import './Item.css'
 const Item = ({product}) => {
 
   return (
-    <div className="tarjetaProducto card bg-dark text-white border border-white p-3 text-center">
+    <div className="tarjetaProducto d-grid card bg-dark text-white border border-white p-3 text-center">
       <div className="card bg-dark p-1" >
         <img className="imgProduct img-fluid rounded mx-auto bg-dark  " src={product.img} alt="" />
       </div>

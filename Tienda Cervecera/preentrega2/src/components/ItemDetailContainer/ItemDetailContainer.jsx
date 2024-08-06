@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { getProductById } from "../../asyncMock"
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
     const {productId} = useParams()
     //console.log(productId)
-    
+    const [loading, setLoading] = useState(true)
     
     
     useEffect(() => {
@@ -23,12 +23,18 @@ const ItemDetailContainer = () => {
             })
             .catch((err) => {
                 console.log(err);
-            } )
+            })
+            .finally(()=>{
+                setLoading(false)
+            })
     },[productId])
+
+
 
   return (
     <div className="container-fluid bg-dark p-3">
-        <ItemDetail {...product}/>
+        {loading ? <h3 className="text-center bg-dark text-white">Cargando producto...</h3> : <ItemDetail {...product}/>}
+        
     </div>
   )
 }
