@@ -35,9 +35,19 @@ export const CartProvider = ({children})=>{
         return accu;
     }
 
+    //funcion total
+    const getTotal = ()=>{
+        let sumando = 0
+        cart.forEach((item)=>{
+            sumando += item.quantity * item.price
+        })
+        return sumando
+    }
+
+
     const totalQuantity = getTotalQuantity()
 
-    const obj={cart,isInCart,addItem, totalQuantity}
+    const obj={cart,isInCart,addItem, totalQuantity , getTotal}
 
     return(
             <CartContext.Provider value={obj}>
