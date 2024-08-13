@@ -8,7 +8,7 @@ const {cart, getTotal, totalQuantity } = useCart()
 const total = getTotal()
 
 if (totalQuantity === 0){
-    return <h3 className='text-center'>No hay productos en ell carrito</h3>
+    return <h3 className='text-center'>No hay productos en el carrito</h3>
 }
 
   return (

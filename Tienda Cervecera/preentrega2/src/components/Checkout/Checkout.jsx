@@ -68,13 +68,15 @@ const Checkout = () => {
             setLoading(false)
         }
 
-        if (loading){
-            return <h1>Se esta generando la orden</h1>
-        }
-         if (orderCreated){
-            return <h1>Pedido completado con exito!!</h1>
-         }
+        
     }
+
+    if (loading){
+        return <h1 className='text-center'>Se esta generando la orden</h1>
+    }
+     if (orderCreated){
+        return <h1 className='text-center'> Pedido completado con exito!!</h1>
+     }
 
   return (
     <div className='container-fluid p-3 bg-dark text-center align-items-center text-white'>
