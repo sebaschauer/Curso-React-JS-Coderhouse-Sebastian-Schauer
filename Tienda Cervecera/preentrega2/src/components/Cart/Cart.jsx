@@ -17,9 +17,9 @@ if (totalQuantity === 0){
             <CartItem  key={item.id} {...item}/>
         ))}
         <h2> Total: ${total}</h2>
-        <div className='container align-items-center p-2 g-3'>
-            <button type="button">Vaciar Carrito</button>
-            <Link to="/checkout"><button type="button">Finalizar Compra</button></Link>
+        <div className='container align-items-center p-2 g-2'>
+            <button className='btn btn-danger rounded ' type="button">Vaciar Carrito</button>
+            <Link to="/checkout"><button className='btn btn-success rounded ' type="button">Finalizar Compra</button></Link>
         </div>
         
     </div>
