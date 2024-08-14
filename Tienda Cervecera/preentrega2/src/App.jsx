@@ -15,6 +15,7 @@ function App() {
   
 
   return (
+    <>
     <BrowserRouter >
     <NotificationProvider >
       <CartProvider>
@@ -30,7 +31,9 @@ function App() {
       </CartProvider>
       </NotificationProvider>
     </BrowserRouter>
+    </>
   )
 }
+
 
 export default App

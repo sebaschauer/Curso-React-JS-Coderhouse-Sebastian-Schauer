@@ -10,16 +10,16 @@ const Notification = ({message, severity}) =>{
     };
 
     const notificationStyles = {
-        position:"center", 
-        top:100,
-        right:30,
+        position:"absolut", 
+        top: 100,
+        right: 30,
         backgroundColor: background[severity] || background.default, 
         color:'white'
     };
 
 
     if (message === "") return
-    return<div style={notificationStyles}>{message}</div>;
+    return <div style={notificationStyles}>{message}</div>;
 };
 
 
