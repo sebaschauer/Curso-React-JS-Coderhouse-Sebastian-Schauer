@@ -26,6 +26,16 @@ export const CartProvider = ({children})=>{
         }
     }
 
+    const removeItem = (id) =>{
+        const cartUpdated = cart.filter((prod)=> prod.id != id)
+        console.log(cartUpdated)
+        setCart(cartUpdated)
+    }
+
+    const clearCart = ()=>{
+        setCart([])
+    }
+
     //funcion totalidad productos en el carrito
     const getTotalQuantity = ()=>{
         let accu = 0;
@@ -47,7 +57,7 @@ export const CartProvider = ({children})=>{
 
     const totalQuantity = getTotalQuantity()
 
-    const obj={cart,isInCart,addItem, totalQuantity , getTotal}
+    const obj={cart,isInCart,addItem, totalQuantity , getTotal, removeItem}
 
     return(
             <CartContext.Provider value={obj}>
